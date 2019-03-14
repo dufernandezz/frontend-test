@@ -1,0 +1,79 @@
+.itemStatus {
+  opacity: 0;
+  transition: all 0.3s;
+  position: absolute;
+  height: 50px;
+  width: 150px;
+  background-color: $white;
+  border-radius: 3px;
+  top:50%;
+  @media screen and (max-width: 768px){
+    right:20px;
+    transform: scale(1.3) translateY(-50%);
+    transform-origin: 100% 0;
+  }
+  @media screen and (min-width: 769px){
+    left: 100%;
+    margin-left: 12px;
+     transform: translateY(-50%);
+     &:after {
+        content: "";
+        width: 0;
+        height: 1px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-40%);
+        left: -6px;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-right: 6px solid $white;
+      }
+  }
+  
+  &:before {
+    content: "";
+    width: 1px;
+    height: 100%;
+    background-color: rgba($black, 0.75);
+    position: absolute;
+    top: 0;
+    left: 65px;
+  }
+ 
+
+  .statusHead {
+    white-space: nowrap;
+    background-color: $red;
+    border-radius: 3px 3px 0 0;
+    line-height: 18px;
+    .statusName {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: bold;
+      color: $white;
+      width: 65px;
+      text-align: center;
+      &:last-child {
+        width: 89px;
+      }
+    }
+  }
+  .statusInfo {
+    white-space: nowrap;
+    .statusValue {
+      line-height: 31px;
+      display: inline-block;
+      font-size: 24px;
+      color: $grey;
+      font-weight: bold;
+      text-align: center;
+      width: 65px;
+      &:last-child {
+        width: 89px;
+      }
+    }
+  }
+  .selected &{
+    opacity: 1;
+  }
+}

@@ -1,0 +1,22 @@
+.header{
+    .logoBox{
+        text-align: left;
+        padding: 5px;
+        img{
+            width: 165px;
+            height: 31px;
+        }
+    }
+    .titleBox{
+        height: 52px;
+        background-color:$white;
+        line-height: 52px;
+        letter-spacing: -3px;
+        font-size: 22px;
+        border-radius: 3px;
+        margin: 15px 0;
+        h2{
+            margin: 0;
+        }
+    }
+}

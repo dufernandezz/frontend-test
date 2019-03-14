@@ -1,0 +1,22 @@
+@import "variables.scss";
+
+
+body {
+  background-color: $purple;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+@import "app.scss";
+@import "header.scss";
+@import "footer.scss";
+@import "list.scss";
+@import "item.scss";
+@import "status.scss";
+
+
+
